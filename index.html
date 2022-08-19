@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,34 @@
     <link rel="stylesheet" href="./assets/style.css">
     <script src="https://kit.fontawesome.com/0aa93583c3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+    <header class="space-between">
+        <a href="./highscores.html" class="hs-game">High Scores <i class="fas fa-crown"></i></a>
+        <div class="timer">
+        <p class="timerDisplay">Time Remaining: <span class="timerCounter">00:30</span></p>
+        </div>
+    </header>
+    
+
     <div class="container">
         <div id="home" class="flex-column flex-center">
             <h1>Are You Ready?</h1>
-            <a href="./game.html" class="btn">Start</a>
-            <a href="./highscores.html" class="btn">High Scores<i class="fas fa-crown"></i></a>
+            <p class="rules">
+                Welcome to the best-ever JavaScript Quiz!<br>
+                During this quiz, you will be tested on some JavaScript fundamentals.<br>
+                There will be five different questions that all need to be answered within 60 seconds.<br>
+                Be careful, though! Each wrong answer will subtract 10 seconds from the timer.<br>
+                Good luck!
+            </p>
+            <button id="start" class="btn">Start</button>
         </div>
     </div>
+
+    <div class="container">
+        
+    </div>
+
 </body>
 </html>
