@@ -1,7 +1,7 @@
 /* Fonts
 ========== */
 
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 
 
 /* Global
@@ -12,8 +12,8 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family: "Audiowide", cursive;
-    background-color: rgb(25, 5, 43);
+    font-family: "Exo 2", cursive;
+    background-color: rgb(145, 117, 169);
 }
 
 body {
@@ -22,13 +22,13 @@ body {
 
 h1 {
     font-size: 5.4rem;
-    color: #fff;
-    margin-bottom: 5rem;
+    color: rgb(45, 3, 48);
+    margin-bottom: 3rem;
 }
 
 h2 {
     font-size: 4.2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 /* Header Elements
@@ -56,6 +56,7 @@ h2 {
 
 .timer-display {
     font-size: 2.5rem;
+    color: #fff;
     margin-right: 2rem;
 }
 
@@ -77,36 +78,49 @@ h2 {
     margin: 0 auto;
     margin-top: 5rem;
     padding: 2rem;
-    background-color:rgb(49, 24, 70);
-    border: .2rem dashed #fff;
+    background-color:rgb(255, 255, 255, .7);
     border-radius: 2rem;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(89, 58, 91, 0.6);
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
+    background-color:rgb(255, 255, 255, 0);
 }
 
 .flex-center {
     justify-content: center;
     align-items: center;
 }
-
+/* for editing purposes. change hidden back and home back */
 .hidden {
+    display: ;
+}
+
+#home,
+#results {
     display: none;
 }
 
 .ready {
-
+    background-color:rgb(255, 255, 255, 0);
 }
 
 .rules {
     font-size: 2rem;
     text-align: center;
+    background-color:rgb(255, 255, 255, 0);
+    
+    line-height: 2;
 }
 
 .btn {
-
+    width: 15rem;
+    height: 5rem;
+    font-size: 2rem;
+    background-color: rgb(145, 117, 169);
+    margin-top: 3rem;
 }
 
 .btn:hover {
