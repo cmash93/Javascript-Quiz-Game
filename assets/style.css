@@ -26,14 +26,102 @@ h2 {
 /* Header Elements
 ==================== */
 
+.space-between {
 
+}
 
+.hs-header {
 
-/* Container Elements
-======================= */
+}
 
+.fa-crown {
 
+}
 
+.timer {
+
+}
+
+.timer-display {
+
+}
+
+/* Container/Rules Elements
+============================ */
+
+.container {
+
+}
+
+.flex-column {
+    
+}
+
+.flex-center {
+
+}
+
+.hidden {
+
+}
+
+.ready {
+
+}
+
+.rules {
+
+}
+
+.btn {
+
+}
+
+.btn:hover {
+
+}
+
+/* Choice Elements
+==================== */
+
+.question {
+
+}
+
+.choice-container {
+
+}
+
+.choice-letter {
+
+}
+
+.choice-text {
+
+}
+
+.correct {
+
+}
+
+.incorrect {
+
+}
+
+/* Result Elements
+==================== */
+
+.finished {
+
+}
+
+.grade {
+
+}
+
+.finalScore {
+
+}
 
 /* Media Queries
 ================== */
