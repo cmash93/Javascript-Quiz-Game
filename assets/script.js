@@ -14,7 +14,7 @@ var secondsLeft = 60;
 const questionsArray = [
 
     {
-        question: ''
+        question: '',
         answersArray: {
             choice1: '',
             choice2: '',
@@ -22,10 +22,10 @@ const questionsArray = [
             choice4: '',
             answer: ,
         }
-    }
+    },
 
     {
-        question: ''
+        question: '',
         answersArray: {
             choice1: '',
             choice2: '',
@@ -33,10 +33,10 @@ const questionsArray = [
             choice4: '',
             answer: ,
         }
-    }
+    },
 
     {
-        question: ''
+        question: '',
         answersArray: {
             choice1: '',
             choice2: '',
@@ -44,10 +44,10 @@ const questionsArray = [
             choice4: '',
             answer: ,
         }
-    }
+    },
 
     {
-        question: ''
+        question: '',
         answersArray: {
             choice1: '',
             choice2: '',
