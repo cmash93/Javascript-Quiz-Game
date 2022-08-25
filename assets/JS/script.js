@@ -1,6 +1,7 @@
 var startButton = document.querySelector('#start');
 var timer = document.querySelector('.timerCounter');
 var question = document.querySelector('#question');
+var choiceEl = document.querySelector('.choice-container')
 var highScores = document.querySelector('#high-scores');
 var finalScoreText = document.querySelector('.finalScore');
 var initials = document.querySelector('#initials')
@@ -75,9 +76,9 @@ function startTimer() {
         timer.textContent = secondsLeft;
         if (secondsLeft <= 0) {
             clearInterval(timerInterval);
-            endGame();
+            // endGame();
         }
-    }, 100)
+    }, 1000)
 }
 
 var choiceOne = document.querySelector('#choice-1')
@@ -89,7 +90,7 @@ function getNewQuestion() {
     currentQuestion++;
     if (currentQuestion === shuffledQuestions.length) {
         secondsLeft = 0;
-        endGame();
+        // endGame();
     }
     else {
         question.textContent = shuffledQuestions[currentQuestion].question;
@@ -103,7 +104,34 @@ function getNewQuestion() {
     };
 };
 
+choiceEl.addEventListener('click', function(event) {
+    let correctAnswer = getCorrectAnswer(currentQuestion);
+    
+    if (.textContent === correctAnswer) {
+        currentScore += 25;
+        choiceEl.style.background = "green"
+    }
+    else {
+        secondsLeft -= 10;
+        choiceEl.style.background = "red"
+    }
+    
+    setTimeout(
+        () => {
+            choiceEl.style.background = "#f88770";
+            getNewQuestion();
+        }, 500)
+})
 
+function getCorrectAnswer(currentQuestion) {
+    let answer = shuffledQuestions[currentQuestion].answersArray;
+
+    for (let j = 0; j < answer.length; j++) {
+        if (answer[j].correct) {
+            return answer[j].choice
+        }
+    }
+}
 
 
 
