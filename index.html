@@ -13,9 +13,9 @@
 <body>
 
     <header class="space-between">
-        <a href="./highscores.html" class="hs-header">High Scores <i class="fas fa-crown"></i></a>
+        <a href="./highscores.html" id="high-scores" class="hs-header">High Scores <i class="fas fa-crown"></i></a>
         <div class="timer">
-        <p class="timer-display">Time Remaining: <span class="timerCounter">:60</span></p>
+        <p class="timer-display">Time Remaining: <span class="timerCounter">60</span></p>
         </div>
     </header>
     
@@ -31,20 +31,26 @@
                 Be careful, though! Each wrong answer will subtract 10 seconds from the timer.<br>
                 Good luck!
             </p>
-            <button id="start" class="btn">Start</button>
+            <div class="buttons">
+                <button id="start" class="btn start">Start</button>
+                <button id="high-scores" class="btn hs-btn">High Scores</button>
+            </div>
         </div>
 
-        <div id="game" class="flex-column flex-center hidden">
+        <div id="game" class="flex-column  justify-center hidden">
             <h1 class="question">Question</h1>
             <div class="choice-container">
                 <p class="choice-letter">A</p>
-                <p class="choice-text" data-number="1">Answer 1</p>
+                <p class="choice-text" data-number="1">Answer 1: Let's see what it looks like if the question is longer</p>
+            </div>
             <div class="choice-container">
                 <p class="choice-letter">B</p>
                 <p class="choice-text" data-number="2">Answer 2</p>
+            </div>
             <div class="choice-container">
                 <p class="choice-letter">C</p>
                 <p class="choice-text" data-number="3">Answer 3</p>
+            </div>
             <div class="choice-container">
                 <p class="choice-letter">D</p>
                 <p class="choice-text" data-number="4">Answer 4</p>
@@ -52,7 +58,7 @@
         </div>
 
         <div id="results" class="flex-column flex-center hidden">
-            <h2 class="finished">Complete!</h2>
+            <h1 class="finished">Complete!</h1>
             <p class="grade">You have scored <span class="finalScore">0</span> out of 100!</p>
             <label>Please enter your initials:</label> 
             <input type="text" id="initials" placeholder="Type initials here...">
@@ -63,6 +69,6 @@
 
     
         
-
+<script src="./assets/script.js"></script>
 </body>
 </html>

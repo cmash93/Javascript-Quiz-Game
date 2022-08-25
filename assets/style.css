@@ -7,22 +7,23 @@
 /* Global
 =========== */
 
+:root {
+    --clear: rgb(255, 255, 255, 0);
+    background: linear-gradient(to right, #ff5f6d     , #ffc371);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
     font-family: "Exo 2", cursive;
-    background-color: rgb(145, 117, 169);
-}
-
-body {
-
+    
 }
 
 h1 {
     font-size: 5.4rem;
-    color: rgb(45, 3, 48);
+    color: rgb(28, 0, 36);
     margin-bottom: 3rem;
 }
 
@@ -37,31 +38,42 @@ h2 {
 .space-between {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10rem;
+    max-width: 70rem;
 }
 
 .hs-header {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     text-decoration: none;
-    margin-left: 2rem;
+    margin-left: 1rem;
+    background: var(--clear);
+    text-align: left;
+
 }
 
 .fa-crown {
     margin-left: .5rem;
+    background:var(--clear);
 }
 
 .timer {
-
+    background:var(--clear);
 }
 
 .timer-display {
     font-size: 2.5rem;
     color: #fff;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    background:var(--clear);
 }
 
 .timerCounter {
-
+    background:var(--clear);
+    font-size: 2.2rem;
 }
 
 /* Container/Rules Elements
@@ -76,9 +88,9 @@ h2 {
     max-width: 80rem;
     max-height: 50rem;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 2rem;
     padding: 2rem;
-    background-color:rgb(255, 255, 255, .7);
+    background:rgb(255, 255, 255, .7);
     border-radius: 2rem;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(89, 58, 91, 0.6);
 }
@@ -86,32 +98,30 @@ h2 {
 .flex-column {
     display: flex;
     flex-direction: column;
-    background-color:rgb(255, 255, 255, 0);
+    background:var(--clear);
 }
 
 .flex-center {
     justify-content: center;
     align-items: center;
 }
-/* for editing purposes. change hidden back and home back */
-.hidden {
-    display: ;
+
+.justify-center {
+    justify-content: center;
 }
 
-#home,
-#results {
+.hidden {
     display: none;
 }
 
 .ready {
-    background-color:rgb(255, 255, 255, 0);
+    background:var(--clear);
 }
 
 .rules {
     font-size: 2rem;
     text-align: center;
-    background-color:rgb(255, 255, 255, 0);
-    
+    background:var(--clear);
     line-height: 2;
 }
 
@@ -119,55 +129,97 @@ h2 {
     width: 15rem;
     height: 5rem;
     font-size: 2rem;
-    background-color: rgb(145, 117, 169);
-    margin-top: 3rem;
+    background: #f88770;
+    margin-top: 2rem;
+}
+
+.start {
+    margin-right: 7rem;
+}
+
+.hs-btn {
+    margin-left: 7rem;
 }
 
 .btn:hover {
-
+    cursor: pointer;
+    box-shadow: 0rem 0.4rem .6rem 0 rgba(144, 88, 88, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
 }
 
 /* Choice Elements
 ==================== */
 
-.question {
-
+.choice-container {
+    display: flex;
+    width: 100%;
+    border-radius: .4rem;
+    background: #f88770;
+    font-size: 3rem;
+    margin-bottom: .8rem;
+    min-width: 70rem;
 }
 
-.choice-container {
-
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0rem 0.4rem .6rem 0 rgba(144, 88, 88, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
 }
 
 .choice-letter {
-
+    padding: 2rem 2.5rem;
+    color: white;
 }
 
 .choice-text {
-
+    padding: 2rem;
+    width: 100%
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .correct {
-
+    background: linear-gradient(32% rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
 }
 
 .incorrect {
-
+    background: linear-gradient(32% rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
 }
+
+
 
 /* Result Elements
 ==================== */
 
-.finished {
-
-}
-
 .grade {
-
+    font-size: 3rem;
 }
 
 .finalScore {
+    font-size: 3rem;
+}
 
+label {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+input {
+    width: 100%;
+    max-width: 20rem;
+    margin-top: 1rem;
+    padding: 12px 20px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* Media Queries
 ================== */
+
+@media screen and (max-width: 769px) {
+    .choice-container{
+        min-width: 40rem;
+    }
+}
