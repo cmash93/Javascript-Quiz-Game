@@ -168,7 +168,7 @@ h2 {
 
 .choice-text {
     padding: 2rem;
-    width: 100%
+    width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -179,13 +179,13 @@ h2 {
 
 .incorrect {
     background: red;
-
+}
 
 
 /* Result Elements
 ==================== */
 
-.grade {
+.gradeResult {
     font-size: 3rem;
 }
 
