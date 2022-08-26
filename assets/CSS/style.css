@@ -21,8 +21,9 @@
     
 }
 
-h1 {
-    font-size: 5.4rem;
+h1,
+#question {
+    font-size: 3rem;
     color: rgb(28, 0, 36);
     margin-bottom: 3rem;
 }
@@ -52,7 +53,7 @@ h2 {
     margin-left: 1rem;
     background: var(--clear);
     text-align: left;
-
+    border: none;
 }
 
 .fa-crown {
@@ -131,14 +132,6 @@ h2 {
     font-size: 2rem;
     background: #f88770;
     margin-top: 2rem;
-}
-
-.start {
-    margin-right: 7rem;
-}
-
-.hs-btn {
-    margin-left: 7rem;
 }
 
 .btn:hover {

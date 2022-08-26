@@ -13,7 +13,7 @@
 <body>
 
     <header class="space-between">
-        <a href="./highscores.html" id="high-scores" class="hs-header">High Scores <i class="fas fa-crown"></i></a>
+        <input id="high-scores" class="hs-header" type="button" value="High Scores"></input>
         <div class="timer">
         <p class="timer-display">Time Remaining: <span class="timerCounter">60</span></p>
         </div>
@@ -31,33 +31,40 @@
                 Be careful, though! Each wrong answer will subtract 10 seconds from the timer.<br>
                 Good luck!
             </p>
-            <div class="buttons">
-                <button id="start" class="btn start">Start</button>
-                <button id="high-scores" class="btn hs-btn">High Scores</button>
-            </div>
+            <button id="start" class="btn">Start</button>
         </div>
 
         <div id="game" class="flex-column  justify-center hidden">
-            <h1 id="question">Question</h1>
-            <div class="choice-container">
-                <p class="choice-letter">A</p>
-                <p class="choice-text" id="choice-1">Answer 1: Let's see what it looks like if the question is longer</p>
+            <div id="question">Here is a question...?</div>
+            <div class="answer-options">
+                <div class="choice-container">
+                    <p class="choice-letter">A</p>
+                    <p class="choice-text" id="choice-1">Answer 1: Let's see what it looks like if the question is longer</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-letter">B</p>
+                    <p class="choice-text" id="choice-2">Answer 2</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-letter">C</p>
+                    <p class="choice-text" id="choice-3">Answer 3</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-letter">D</p>
+                    <p class="choice-text" id="choice-4">Answer 4</p>
+                </div>
+                        
             </div>
-            <div class="choice-container">
-                <p class="choice-letter">B</p>
-                <p class="choice-text" id="choice-2">Answer 2</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-letter">C</p>
-                <p class="choice-text" id="choice-3">Answer 3</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-letter">D</p>
-                <p class="choice-text" id="choice-4">Answer 4</p>
-            </div>
-        </div>
 
         <div id="results" class="flex-column flex-center hidden">
+            <h1 class="finished">Complete!</h1>
+            <p class="grade">You have scored <span class="finalScore">0</span> out of 100!</p>
+            <label>Please enter your initials:</label> 
+            <input type="text" id="initials" placeholder="Type initials here...">
+            <button id="finish" class="btn">Submit</button>
+        </div>
+
+        <div id="scores-div" class="flex-column flex-center hidden">
             <h1 class="finished">Complete!</h1>
             <p class="grade">You have scored <span class="finalScore">0</span> out of 100!</p>
             <label>Please enter your initials:</label> 
