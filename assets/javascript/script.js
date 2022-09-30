@@ -77,7 +77,6 @@ function startQuiz() {
 }
 startBtn.addEventListener("click", startQuiz);
 
-
 function startTimer() {
     timer.textContent = secondsLeft;
 
@@ -87,18 +86,15 @@ function startTimer() {
         if (secondsLeft <= 0 || currentQuestion === questions.length){
             clearInterval(timerInterval);
             // captureScore();
+            console.log(score)
         }
     }, 1000);
 }
 
-
-// getting questions and options from array
-
 function showQuestions() {
-
     const questionsDiv = document.querySelector('.questions')
 
-    if (currentQuestion <= questions.length) {
+    if (currentQuestion < questions.length) {
         let createdQuestion = document.createElement('p');
         createdQuestion.innerHTML = questions[currentQuestion].question;
         questionsDiv.append(createdQuestion)
@@ -107,7 +103,6 @@ function showQuestions() {
             let choiceBtn = document.createElement('button');
             choiceBtn.innerHTML = questions[currentQuestion].options[i]
             choiceBtn.setAttribute('data-id', i)
-            console.log(choiceBtn.innerHTML)
             choiceBtn.addEventListener('click', function(event){
                 if(choiceBtn.innerText === questions[currentQuestion].answer){
                     score += 20;
@@ -119,15 +114,21 @@ function showQuestions() {
                 createdQuestion.innerHTML = '';
 
                 if (currentQuestion === questions.length){
-                    return;
+                    return
                 }
                 else {
                     currentQuestion++;
+                    removeBtns();
                     showQuestions();
                 }
             })
             questionsDiv.append(choiceBtn)
+            console.log(score)
         }
     }
 }
-console.log(questions[currentQuestion])
+
+function removeBtns() {
+    const questionsDiv = document.querySelector('.questions')
+    questionsDiv.innerHTML = '';
+}
